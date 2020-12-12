@@ -1,0 +1,16 @@
+"""
+使用遞迴的方式列印九九乘法表
+"""
+
+def get_result(num):
+    if num == 1:
+        print("1 * 1 = 1")
+    else:
+        get_result(num - 1)
+        for i in range(1, num + 1):
+            print("%d * %d = %d" % (i, num, i * num), end="\t")
+        print()
+
+
+get_result(10)
+# print("")
